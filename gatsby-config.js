@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Exploring Things`,
+    title: `Thomas Neal`,
     description: `I am interested in many things, currently exploring indieweb`,
     author: `nealthom`,
   },
@@ -8,8 +8,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `GatsbyJS`,
-        short_name: `GatsbyJS`,
+        name: `Thomas Neal`,
+        short_name: `nealthom`,
         start_url: `/`,
         background_color: `#0ccac4`,
         theme_color: `#0ccac4`,
