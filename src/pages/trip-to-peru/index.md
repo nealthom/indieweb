@@ -4,4 +4,4 @@ date: "2020-01-26"
 spoiler: I was there.
 ---
 
-![Big Smile](limahostel.jpg "Title")
+![Big Smile](./limahostel.jpg)
