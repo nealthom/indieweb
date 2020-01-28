@@ -20,6 +20,20 @@ export default () => {
           </a>
           , this is my place to explore what it has to offer.
         </p>
+        <p>
+          Follow{" "}
+          <a class="h-card" rel="me" href="https://www.indieweb.netlify.com/">
+            Thomas
+          </a>{" "}
+          on{" "}
+          <a href="https://twitter.com/nealthom" rel="me">
+            Twitter (@nealthom)
+          </a>
+          , or send him an{" "}
+          <a class="u-email" href="mailto:nealthom@gmail.com" rel="me">
+            email
+          </a>
+        </p>
       </div>
     </Layout>
   )
