@@ -33,6 +33,10 @@ export default () => {
           <a class="u-email" href="mailto:nealthom@gmail.com" rel="me">
             email
           </a>
+          <link
+            rel="webmention"
+            href="https://webmention.io/indieweb.netlify.com/webmention"
+          />
         </p>
       </div>
     </Layout>
