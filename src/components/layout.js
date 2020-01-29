@@ -58,6 +58,18 @@ export default ({ children }) => {
       </Link>
       {children}
 
+      <article class="h-card">
+        <header>
+          <img class="u-photo" src="http://..." />
+          <h1 class="p-name">The Title</h1>
+        </header>
+        <p class="p-summary e-content">The summary</p>
+        <footer>
+          <a class="u-url p-name" href="http://...">
+            The author
+          </a>
+        </footer>
+      </article>
       <a href="http://www.twitter.com/nealthom">
         <FaTwitter />
       </a>
