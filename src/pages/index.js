@@ -22,7 +22,7 @@ export default () => {
         </p>
         <p>
           Follow{" "}
-          <a class="h-card" rel="me" href="https://www.indieweb.netlify.com/">
+          <a class="h-card" rel="me" href="http://www.indieweb.netlify.com/">
             Thomas
           </a>{" "}
           on{" "}
