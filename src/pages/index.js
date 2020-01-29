@@ -22,7 +22,7 @@ export default () => {
         </p>
         <p>
           Follow{" "}
-          <a class="h-card" rel="me" href="https://indieweb.netlify.com/">
+          <a className="h-card" rel="me" href="https://indieweb.netlify.com/">
             Thomas
           </a>{" "}
           on{" "}
@@ -30,7 +30,7 @@ export default () => {
             Twitter (@nealthom)
           </a>
           , or send him an{" "}
-          <a class="u-email" href="mailto:nealthom@gmail.com" rel="me">
+          <a className="u-email" href="mailto:nealthom@gmail.com" rel="me">
             email
           </a>
           <link
