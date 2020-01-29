@@ -58,9 +58,9 @@ export default ({ children }) => {
       </Link>
       {children}
 
-      <article class="h-card">
+      <article class="h-card" rel="me" href="https://indieweb.netlify.com/">
         <header>
-          <img class="u-photo" src="http://..." />
+          {/* <img class="u-photo" src="http://..." /> */}
           <h1 class="p-name">The Title</h1>
         </header>
         <p class="p-summary e-content">The summary</p>
@@ -70,13 +70,13 @@ export default ({ children }) => {
           </a>
         </footer>
       </article>
-      <a href="http://www.twitter.com/nealthom">
+      <a href="https://www.twitter.com/nealthom">
         <FaTwitter />
       </a>
       <a href="http://www.facebook.com/thomas.b.neal">
         <FaFacebookF />
       </a>
-      <a href="http://www.github.com/nealthom" rel="me">
+      <a href="https://www.github.com/nealthom" rel="me">
         <FaGithub />
       </a>
     </div>
