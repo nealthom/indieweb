@@ -64,7 +64,7 @@ export default ({ children }) => {
       <a href="http://www.facebook.com/thomas.b.neal">
         <FaFacebookF />
       </a>
-      <a href="http://www.github.com/nealthom">
+      <a href="http://www.github.com/nealthom" rel="me">
         <FaGithub />
       </a>
     </div>
