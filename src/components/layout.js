@@ -67,6 +67,13 @@ export default ({ children }) => {
       <a href="https://www.github.com/nealthom" rel="me">
         <FaGithub />
       </a>
+      <p>
+        <q>
+          This is Life Eternal, right here. Be fulfilled, be happy, be kind, be
+          in love, and never do anything that you can’t live with forever.
+        </q>
+        -Alan Moore
+      </p>
     </div>
   )
 }

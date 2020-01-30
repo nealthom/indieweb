@@ -6,3 +6,4 @@ spoiler: I was there.
 ---
 
 ![Big Smile](./limahostel.jpg)
+My wife visited place by herself 2 years earlier and took the same pic, so I had to do the same thing.  I was alone and thinking about her.  
