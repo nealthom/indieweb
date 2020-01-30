@@ -10,7 +10,6 @@ export default ({ data }) => {
 
   return (
     <Layout>
-      <SEO title={title} description={excerpt} />
       <div className="h-entry">
         <h1>{title}</h1>
         <div

@@ -58,18 +58,6 @@ export default ({ children }) => {
       </Link>
       {children}
 
-      <article className="h-card" rel="me" href="https://indieweb.netlify.com/">
-        <header>
-          {/* <img class="u-photo" src="http://..." /> */}
-          <h1 className="p-name">The Title</h1>
-        </header>
-        <p className="p-summary e-content">The summary</p>
-        <footer>
-          <a className="u-url p-name" href="http://...">
-            The author
-          </a>
-        </footer>
-      </article>
       <a href="https://www.twitter.com/nealthom">
         <FaTwitter />
       </a>
