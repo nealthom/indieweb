@@ -58,14 +58,14 @@ export default ({ children }) => {
       </Link>
       {children}
 
-      <article class="h-card" rel="me" href="https://indieweb.netlify.com/">
+      <article className="h-card" rel="me" href="https://indieweb.netlify.com/">
         <header>
           {/* <img class="u-photo" src="http://..." /> */}
-          <h1 class="p-name">The Title</h1>
+          <h1 className="p-name">The Title</h1>
         </header>
-        <p class="p-summary e-content">The summary</p>
+        <p className="p-summary e-content">The summary</p>
         <footer>
-          <a class="u-url p-name" href="http://...">
+          <a className="u-url p-name" href="http://...">
             The author
           </a>
         </footer>
