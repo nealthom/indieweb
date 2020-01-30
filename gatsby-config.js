@@ -53,16 +53,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-webmention`,
       options: {
-        username: 'www.indieweb.netlify.com', // webmention.io username
+        username: "https://indieweb.netlify.com", // webmention.io username
         identity: {
-          github: 'nealthom',
-          twitter: 'nealthom' // no @
+          github: "nealthom",
+          twitter: "nealthom", // no @
         },
         mentions: true,
         pingbacks: true,
-        domain: 'www.indieweb.netlify.com',
-        token: process.env.WEBMENTIONS_TOKEN
-      }
-    }
+        domain: "https://indieweb.netlify.com",
+        token: process.env.WEBMENTIONS_TOKEN,
+      },
+    },
   ],
 }
