@@ -4,13 +4,21 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 export default ({ data }) => {
-  const post = data.markdownRemark
+  // const post = data.markdownRemark
+  const { title, excerpt, date, slug, html } = data.markdownRemark.frontmatter
+
   return (
     <Layout>
-      <SEO title={post.frontmatter.title} description={post.excerpt} />
-      <div>
-        <h1>{post.frontmatter.title}</h1>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <SEO title={title} description={excerpt} />
+      <div className="h-entry">
+        <h1>{title}</h1>
+        <div
+          className="e-content p-name"
+          dangerouslySetInnerHTML={{ __html: html }}
+        />
+        <a className="u-url" href={`https://indieweb.netlify.com/${slug}/`}>
+          Published <time className="dt-published">{date}</time>
+        </a>
       </div>
     </Layout>
   )
@@ -22,6 +30,8 @@ export const query = graphql`
       html
       frontmatter {
         title
+        date
+        slug
       }
       excerpt
     }
