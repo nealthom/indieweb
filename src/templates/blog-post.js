@@ -5,7 +5,8 @@ import SEO from "../components/seo"
 
 export default ({ data }) => {
   // const post = data.markdownRemark
-  const { title, excerpt, date, slug, html } = data.markdownRemark.frontmatter
+  const { title, excerpt, date, slug } = data.markdownRemark.frontmatter
+  const html = data.markdownRemark.html
 
   return (
     <Layout>
