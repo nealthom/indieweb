@@ -60,7 +60,7 @@ module.exports = {
         },
         mentions: true,
         pingbacks: true,
-        domain: "https://indieweb.netlify.com",
+        domain: "indieweb.netlify.com",
         token: process.env.WEBMENTIONS_TOKEN,
       },
     },
