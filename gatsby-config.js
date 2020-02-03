@@ -53,7 +53,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-webmention`,
       options: {
-        username: "https://indieweb.netlify.com", // webmention.io username
+        username: "indieweb.netlify.com", // webmention.io username
         identity: {
           github: "nealthom",
           twitter: "nealthom", // no @
