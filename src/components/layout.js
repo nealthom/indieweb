@@ -26,7 +26,7 @@ export default ({ children }) => {
         max-width: 700px;
         padding: ${rhythm(2)};
         padding-top: ${rhythm(1.5)};
-        border: black solid 2px;
+        border: #3498db solid 5px;
       `}
     >
       <Link to={`/`}>
