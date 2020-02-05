@@ -1,4 +1,5 @@
 import React from "react"
+import Headroom from 'react-headroom'
 import { css } from "@emotion/core"
 
 import { FaTwitter, FaFacebookF, FaGithub } from "react-icons/fa"
@@ -29,6 +30,7 @@ export default ({ children }) => {
         border: #3498db solid 5px;
       `}
     >
+      <Headroom>
       <Link to={`/`}>
         <h3
           css={css`
@@ -56,6 +58,7 @@ export default ({ children }) => {
       >
         About
       </Link>
+      </Headroom>
       {children}
 
       <a href="https://www.twitter.com/nealthom">
