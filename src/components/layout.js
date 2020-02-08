@@ -1,5 +1,5 @@
 import React from "react"
-import Headroom from 'react-headroom'
+import Headroom from "react-headroom"
 import { css } from "@emotion/core"
 
 import { FaTwitter, FaFacebookF, FaGithub } from "react-icons/fa"
@@ -31,33 +31,33 @@ export default ({ children }) => {
       `}
     >
       <Headroom>
-      <Link to={`/`}>
-        <h3
+        <Link to={`/`}>
+          <h3
+            css={css`
+              margin-bottom: ${rhythm(2)};
+              display: inline-block;
+              font-style: normal;
+            `}
+          >
+            {data.site.siteMetadata.title}
+          </h3>
+        </Link>
+        <Link
+          to={`/blog/`}
           css={css`
-            margin-bottom: ${rhythm(2)};
-            display: inline-block;
-            font-style: normal;
+            float: right;
           `}
         >
-          {data.site.siteMetadata.title}
-        </h3>
-      </Link>
-      <Link
-        to={`/blog/`}
-        css={css`
-          float: right;
-        `}
-      >
-        Blog
-      </Link>
-      <Link
-        to={`/about/`}
-        css={css`
-          float: right;
-        `}
-      >
-        About
-      </Link>
+          Blog
+        </Link>
+        <Link
+          to={`/about/`}
+          css={css`
+            float: right;
+          `}
+        >
+          About
+        </Link>
       </Headroom>
       {children}
 
