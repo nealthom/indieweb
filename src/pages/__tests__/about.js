@@ -1,23 +1,30 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import { StaticQuery } from "gatsby"
-import Layout from "../layout"
+import Index from "../index"
 
 beforeEach(() => {
   StaticQuery.mockImplementationOnce(({ render }) =>
     render({
       site: {
         siteMetadata: {
-          title: `Thomas Neal`,
+          title: `Default Starter`,
         },
       },
     })
   )
 })
 
-describe("Layout", () => {
+describe("Index", () => {
   it("renders correctly", () => {
-    const tree = renderer.create(<Layout />).toJSON()
+    const data = {
+      site: {
+        siteMetadata: {
+          author: "Your name",
+        },
+      },
+    }
+
+    const tree = renderer.create(<Index data={data} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })
