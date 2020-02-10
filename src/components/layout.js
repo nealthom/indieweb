@@ -27,19 +27,22 @@ export default ({ children }) => {
         max-width: 700px;
         padding: ${rhythm(2)};
         padding-top: ${rhythm(1.5)};
-        border: #3498db solid 5px;
         display: flex;
         flex-direction: column;
       `}
     >
       <Headroom
         style={{
+          webkitTransition: "all .5s ease-in-out",
+          mozTransition: "all .5s ease-in-out",
+          oTransition: "all .5s ease-in-out",
+          transition: "all .5s ease-in-out",
           background: "white",
-          maxWidth: "700px",
+          maxWidth: "600px",
           margin: "0 auto",
           padding: `${rhythm(2)}`,
           paddingTop: `${rhythm(1.5)}`,
-          border: `#3498db solid 5px`,
+          // border: `#3498db solid 5px`,
           display: "flex",
           justifyContent: "space-evenly",
         }}
