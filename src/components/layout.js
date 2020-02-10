@@ -28,9 +28,22 @@ export default ({ children }) => {
         padding: ${rhythm(2)};
         padding-top: ${rhythm(1.5)};
         border: #3498db solid 5px;
+        display: flex;
+        flex-direction: column;
       `}
     >
-      <Headroom>
+      <Headroom
+        style={{
+          background: "white",
+          maxWidth: "700px",
+          margin: "0 auto",
+          padding: `${rhythm(2)}`,
+          paddingTop: `${rhythm(1.5)}`,
+          border: `#3498db solid 5px`,
+          display: "flex",
+          justifyContent: "space-evenly",
+        }}
+      >
         <Link to={`/`}>
           <h3
             css={css`
