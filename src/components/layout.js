@@ -1,5 +1,4 @@
 import React from "react"
-import Headroom from "react-headroom"
 import { css } from "@emotion/core"
 
 import { FaTwitter, FaFacebookF, FaGithub } from "react-icons/fa"
@@ -27,54 +26,39 @@ export default ({ children }) => {
         max-width: 700px;
         padding: ${rhythm(2)};
         padding-top: ${rhythm(1.5)};
-        display: flex;
-        flex-direction: column;
+        /* display: flex;
+        flex-direction: column; */
+        background-color: #e9e2d7;
       `}
     >
-      <Headroom
-        style={{
-          webkitTransition: "all .75s ease-in-out",
-          mozTransition: "all .75s ease-in-out",
-          oTransition: "all .75s ease-in-out",
-          transition: "all .75s ease-in-out",
-          background: "white",
-          maxWidth: "600px",
-          margin: "0 auto",
-          padding: `${rhythm(2)}`,
-          paddingTop: `${rhythm(1.5)}`,
-          // border: `#3498db solid 5px`,
-          display: "flex",
-          justifyContent: "space-between",
-        }}
+      <Link to={`/`}>
+        <h3
+          css={css`
+            margin-bottom: ${rhythm(2)};
+            display: inline-block;
+            font-style: normal;
+          `}
+        >
+          {data.site.siteMetadata.title}
+        </h3>
+      </Link>
+      <Link
+        to={`/blog/`}
+        css={css`
+          float: right;
+        `}
       >
-        <Link to={`/`}>
-          <h3
-            css={css`
-              margin-bottom: ${rhythm(2)};
-              display: inline-block;
-              font-style: normal;
-            `}
-          >
-            {data.site.siteMetadata.title}
-          </h3>
-        </Link>
-        <Link
-          to={`/blog/`}
-          css={css`
-            float: right;
-          `}
-        >
-          Blog
-        </Link>
-        <Link
-          to={`/about/`}
-          css={css`
-            float: right;
-          `}
-        >
-          About
-        </Link>
-      </Headroom>
+        Blog
+      </Link>
+      <Link
+        to={`/about/`}
+        css={css`
+          float: right;
+        `}
+      >
+        About
+      </Link>
+
       {children}
 
       <a href="https://www.twitter.com/nealthom">
