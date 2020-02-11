@@ -1,5 +1,5 @@
 import React from "react"
-import { css } from "@emotion/core"
+import { Global, css } from "@emotion/core"
 
 import { FaTwitter, FaFacebookF, FaGithub } from "react-icons/fa"
 
@@ -28,9 +28,15 @@ export default ({ children }) => {
         padding-top: ${rhythm(1.5)};
         /* display: flex;
         flex-direction: column; */
-        background-color: #e9e2d7;
       `}
     >
+      <Global
+        styles={css`
+          body {
+            background: #e9e2d7;
+          }
+        `}
+      />
       <Link to={`/`}>
         <h3
           css={css`
