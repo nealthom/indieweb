@@ -7,6 +7,73 @@ import { useStaticQuery, Link, graphql } from "gatsby"
 
 import { rhythm } from "../utils/typography"
 
+export const PureLayout = ({ data, children }) => (
+  <div
+    css={css`
+      margin: 0 auto;
+      max-width: 700px;
+      padding: ${rhythm(2)};
+      padding-top: ${rhythm(1.5)};
+      /* display: flex;
+        flex-direction: column; */
+    `}
+  >
+    <Global
+      styles={css`
+        body {
+          background: #e9e2d7;
+        }
+      `}
+    />
+    <Link to={`/`}>
+      <h3
+        css={css`
+          margin-bottom: ${rhythm(2)};
+          display: inline-block;
+          font-style: normal;
+        `}
+      >
+        {data.site.siteMetadata.title}
+      </h3>
+    </Link>
+    <Link
+      to={`/blog/`}
+      css={css`
+        float: right;
+      `}
+    >
+      Blog
+    </Link>
+    <Link
+      to={`/about/`}
+      css={css`
+        float: right;
+      `}
+    >
+      About
+    </Link>
+
+    {children}
+
+    <a href="https://www.twitter.com/nealthom">
+      <FaTwitter />
+    </a>
+    <a href="http://www.facebook.com/thomas.b.neal">
+      <FaFacebookF />
+    </a>
+    <a href="https://www.github.com/nealthom" rel="me">
+      <FaGithub />
+    </a>
+    <p>
+      <q>
+        This is Life Eternal, right here. Be fulfilled, be happy, be kind, be in
+        love, and never do anything that you can’t live with forever.
+      </q>
+      -Alan Moore
+    </p>
+  </div>
+)
+
 export default ({ children }) => {
   const data = useStaticQuery(
     graphql`
@@ -19,70 +86,5 @@ export default ({ children }) => {
       }
     `
   )
-  return (
-    <div
-      css={css`
-        margin: 0 auto;
-        max-width: 700px;
-        padding: ${rhythm(2)};
-        padding-top: ${rhythm(1.5)};
-        /* display: flex;
-        flex-direction: column; */
-      `}
-    >
-      <Global
-        styles={css`
-          body {
-            background: #e9e2d7;
-          }
-        `}
-      />
-      <Link to={`/`}>
-        <h3
-          css={css`
-            margin-bottom: ${rhythm(2)};
-            display: inline-block;
-            font-style: normal;
-          `}
-        >
-          {data.site.siteMetadata.title}
-        </h3>
-      </Link>
-      <Link
-        to={`/blog/`}
-        css={css`
-          float: right;
-        `}
-      >
-        Blog
-      </Link>
-      <Link
-        to={`/about/`}
-        css={css`
-          float: right;
-        `}
-      >
-        About
-      </Link>
-
-      {children}
-
-      <a href="https://www.twitter.com/nealthom">
-        <FaTwitter />
-      </a>
-      <a href="http://www.facebook.com/thomas.b.neal">
-        <FaFacebookF />
-      </a>
-      <a href="https://www.github.com/nealthom" rel="me">
-        <FaGithub />
-      </a>
-      <p>
-        <q>
-          This is Life Eternal, right here. Be fulfilled, be happy, be kind, be
-          in love, and never do anything that you can’t live with forever.
-        </q>
-        -Alan Moore
-      </p>
-    </div>
-  )
+  return <PureLayout data={data}> {children}</PureLayout>
 }
