@@ -1,6 +1,7 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import Index from "../index"
+import { StaticQuery } from "gatsby"
+import About from "../about"
 
 beforeEach(() => {
   StaticQuery.mockImplementationOnce(({ render }) =>
@@ -14,7 +15,7 @@ beforeEach(() => {
   )
 })
 
-describe("Index", () => {
+describe("About", () => {
   it("renders correctly", () => {
     const data = {
       site: {
@@ -24,7 +25,7 @@ describe("Index", () => {
       },
     }
 
-    const tree = renderer.create(<Index data={data} />).toJSON()
+    const tree = renderer.create(<About data={data} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })
