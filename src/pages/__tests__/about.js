@@ -1,6 +1,5 @@
 import React from "react"
 import renderer from "react-test-renderer"
-import { render } from "@testing-library/react"
 import { StaticQuery } from "gatsby"
 import About from "../about"
 
@@ -26,8 +25,7 @@ describe("About", () => {
       },
     }
 
-    // const tree = renderer.create(<About data={data} />).toJSON()
-    const tree = render(<About data={data} />).toJSON()
+    const tree = renderer.create(<About data={data} />).toJSON()
     expect(tree).toMatchSnapshot()
   })
 })
