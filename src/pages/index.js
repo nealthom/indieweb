@@ -17,7 +17,7 @@ export default () => {
     <Layout>
       <div>
         <h1>Welcome</h1>
-        {typeof window !== "undefined" ? <P5Wrapper sketch={sketch} /> : ""}
+        <P5Wrapper sketch={sketch} />
       </div>
     </Layout>
   )
