@@ -21,7 +21,7 @@ export default function sketch(p) {
 
   p.draw = () => {
     p.background(255)
-    p.stroke(10, 10)
+    p.stroke(30, 30)
     p.spiral(p.width / 2, p.height / 2, 0, 1000)
   }
 
