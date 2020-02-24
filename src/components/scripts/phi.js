@@ -4,7 +4,7 @@
 // We'll ride the spiral to the end and may just go where no one's been
 // Spiral out, keep going ...
 
-export default function sketch(p) {
+export default p => {
   const phi = 1.6180339
   p.state = []
   p.dispatch = () => {}
