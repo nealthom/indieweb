@@ -36,14 +36,7 @@ export const PureLayout = ({ data, children }) => (
         {data.site.siteMetadata.title}
       </h3>
     </Link>
-    <Link
-      to={`/blog/`}
-      css={css`
-        float: right;
-      `}
-    >
-      Blog
-    </Link>
+
     <Link
       to={`/about/`}
       css={css`
@@ -51,6 +44,23 @@ export const PureLayout = ({ data, children }) => (
       `}
     >
       About
+    </Link>
+
+    <Link
+      to={`/experiments/`}
+      css={css`
+        float: right;
+      `}
+    >
+      Experimental
+    </Link>
+    <Link
+      to={`/blog/`}
+      css={css`
+        float: right;
+      `}
+    >
+      Blog
     </Link>
 
     {children}
@@ -64,13 +74,6 @@ export const PureLayout = ({ data, children }) => (
     <a href="https://www.github.com/nealthom" rel="me">
       <FaGithub />
     </a>
-    <p>
-      <q>
-        This is Life Eternal, right here. Be fulfilled, be happy, be kind, be in
-        love, and never do anything that you can’t live with forever.
-      </q>
-      -Alan Moore
-    </p>
   </div>
 )
 
