@@ -20,9 +20,9 @@ export default p => {
   }
 
   p.draw = () => {
-    p.background(255)
+    p.background("#e9e2d7")
     p.stroke(30, 30)
-    p.spiral(p.width / 2, p.height / 2, 0, 1000)
+    p.spiral(p.width / 2, p.height / 2, 0, 300)
   }
 
   p.spiral = (x, y, origin, lines) => {
