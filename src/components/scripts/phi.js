@@ -21,7 +21,7 @@ export default p => {
 
   p.draw = () => {
     p.background("#e9e2d7")
-    p.stroke(30, 30)
+    p.stroke("pink")
     p.spiral(p.width / 2, p.height / 2, 0, 300)
   }
 
