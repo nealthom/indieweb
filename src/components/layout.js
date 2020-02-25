@@ -52,7 +52,7 @@ export const PureLayout = ({ data, children }) => (
         float: right;
       `}
     >
-      Experimental
+      Experiments
     </Link>
     <Link
       to={`/blog/`}
