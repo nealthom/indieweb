@@ -25,43 +25,53 @@ export const PureLayout = ({ data, children }) => (
         }
       `}
     />
-    <Link to={`/`}>
-      <h3
+    <div
+      css={css`
+        @media screen and (max-width: 800px) {
+          display: grid;
+          grid-template-columns: 1fr;
+          /* grid-gap: 15px; */
+        }
+      `}
+    >
+      <Link to={`/`}>
+        <h3
+          css={css`
+            margin-bottom: ${rhythm(2)};
+            display: inline-block;
+            font-style: normal;
+          `}
+        >
+          {data.site.siteMetadata.title}
+        </h3>
+      </Link>
+
+      <Link
+        to={`/about/`}
         css={css`
-          margin-bottom: ${rhythm(2)};
-          display: inline-block;
-          font-style: normal;
+          float: right;
         `}
       >
-        {data.site.siteMetadata.title}
-      </h3>
-    </Link>
+        About
+      </Link>
 
-    <Link
-      to={`/about/`}
-      css={css`
-        float: right;
-      `}
-    >
-      About
-    </Link>
-
-    <Link
-      to={`/experiments/`}
-      css={css`
-        float: right;
-      `}
-    >
-      Experiments
-    </Link>
-    <Link
-      to={`/blog/`}
-      css={css`
-        float: right;
-      `}
-    >
-      Blog
-    </Link>
+      <Link
+        to={`/experiments/`}
+        css={css`
+          float: right;
+        `}
+      >
+        Experiments
+      </Link>
+      <Link
+        to={`/blog/`}
+        css={css`
+          float: right;
+        `}
+      >
+        Blog
+      </Link>
+    </div>
 
     {children}
 
