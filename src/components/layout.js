@@ -14,8 +14,6 @@ export const PureLayout = ({ data, children }) => (
       max-width: 700px;
       padding: ${rhythm(2)};
       padding-top: ${rhythm(1.5)};
-      /* display: flex;
-        flex-direction: column; */
     `}
   >
     <Global
@@ -30,7 +28,6 @@ export const PureLayout = ({ data, children }) => (
         @media screen and (max-width: 800px) {
           display: grid;
           grid-template-columns: 1fr;
-          /* grid-gap: 15px; */
         }
       `}
     >

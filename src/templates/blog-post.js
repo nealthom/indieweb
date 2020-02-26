@@ -1,11 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 
 export default ({ data }) => {
-  // const post = data.markdownRemark
-  const { title, excerpt, date, slug } = data.markdownRemark.frontmatter
+  const { title, date, slug } = data.markdownRemark.frontmatter
   const html = data.markdownRemark.html
 
   return (
