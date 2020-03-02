@@ -1,8 +1,11 @@
+//import { p } from "p5"
+
 class Particle {
-  constructor(l) {
+  constructor(p, l) {
+    this.p = p
     this.position = l.copy()
-    this.acceleration = createVector(0, 0.05)
-    this.velocity = createVector(random(-1, 1), random(-2, 0))
+    this.acceleration = p.createVector(0, 0.05)
+    this.velocity = p.createVector(p.random(-1, 1), p.random(-2, 0))
     this.lifespan = 255
   }
   update() {
@@ -11,9 +14,9 @@ class Particle {
     this.lifespan -= 2.0
   }
   display() {
-    stroke(0, this.lifespan)
-    fill(175, this.lifespan)
-    ellipse(this.position.x, this.position.y, 8, 8)
+    this.p.stroke(0, this.lifespan)
+    this.p.fill(175, this.lifespan)
+    this.p.ellipse(this.position.x, this.position.y, 8, 8)
   }
 
   isDead() {

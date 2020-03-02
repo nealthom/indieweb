@@ -1,7 +1,7 @@
 import Particle from "../classes/Particle"
 
 export default p => {
-  const total = 10
+  const total = 50
   let particles = []
 
   p.windowResized = () => {
@@ -11,7 +11,7 @@ export default p => {
   p.setup = () => {
     p.createCanvas(p.windowWidth, p.windowHeight)
     for (let i = 0; i < total; i++) {
-      particles[i] = new Particle(p.createVector(p.width / 2), 10)
+      particles[i] = new Particle(p, p.createVector(p.width / 2), 10)
     }
   }
 
