@@ -56,8 +56,8 @@ class Particle {
     this.lifespan -= 2.0
   }
   display() {
-    this.p.stroke(0, this.lifespan)
-    this.p.fill(175, this.lifespan)
+    this.p.stroke("pink")
+    this.p.fill(255, this.lifespan, this.lifespan)
     this.p.ellipse(this.position.x, this.position.y, 8, 8)
   }
 
