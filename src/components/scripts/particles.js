@@ -20,17 +20,18 @@ export default p => {
   }
 
   p.mousePressed = () => {
-    systems.push(new ParticleSystem(p.createVector(p.mouseX, p.mouseY)))
+    systems.push(new ParticleSystem(p, p.createVector(p.mouseX, p.mouseY)))
   }
 }
 
 class ParticleSystem {
-  constructor(position) {
+  constructor(p, position) {
+    this.p = p
     this.particles = []
     this.origin = position.copy()
   }
   addParticle() {
-    this.particles.push(new Particle(this.origin))
+    this.particles.push(new Particle(this.p, this.origin))
   }
   run() {
     for (let i = this.particles.length - 1; i >= 0; i--) {
