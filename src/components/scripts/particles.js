@@ -31,7 +31,12 @@ class ParticleSystem {
     this.origin = position.copy()
   }
   addParticle() {
-    this.particles.push(new Particle(this.p, this.origin))
+    const r = this.p.random(1)
+    if (r < 0.5) {
+      this.particles.push(new Confetti(this.p, this.origin))
+    } else {
+      this.particles.push(new Particle(this.p, this.origin))
+    }
   }
   run() {
     for (let i = this.particles.length - 1; i >= 0; i--) {
@@ -68,5 +73,31 @@ class Particle {
   run() {
     this.update()
     this.display()
+  }
+}
+
+class Confetti extends Particle {
+  constructor(p, l) {
+    super(p, l)
+    this.p = p
+  }
+
+  display() {
+    const theta = this.p.map(
+      this.position.x,
+      0,
+      this.p.width,
+      0,
+      this.p.TWO_PI * 2
+    )
+    this.p.rectMode(this.p.CENTER)
+    this.p.stroke("pink")
+    this.p.fill(255, this.lifespan, this.lifespan)
+
+    this.p.push()
+    this.p.translate(this.position.x, this.position.y)
+    this.p.rotate(theta)
+    this.p.rect(0, 0, 8, 8)
+    this.p.pop()
   }
 }
