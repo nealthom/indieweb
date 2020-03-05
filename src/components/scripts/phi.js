@@ -8,9 +8,9 @@ export default p => {
   const phi = 1.6180339
   p.state = []
   p.dispatch = () => {}
-  let r = 255,
-    g = 10,
-    b = 0
+  let r = p.random(0, 255)
+  let g = p.random(0, 255)
+  let b = p.random(0, 255)
 
   p.windowResized = () => {
     p.resizeCanvas(p.windowWidth, p.windowHeight)
@@ -31,9 +31,9 @@ export default p => {
       b++
     }
     if (b > 255) {
-      r = 255
-      g = 10
-      b = 0
+      r = p.random(0, 255)
+      g = p.random(0, 255)
+      b = p.random(0, 255)
     }
     p.background("#e9e2d7")
     p.stroke(r, g, b)
