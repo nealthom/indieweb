@@ -51,7 +51,7 @@ class Particle {
   constructor(p, l) {
     this.p = p
     this.position = l.copy()
-    this.acceleration = p.createVector(0, 0.05)
+    this.acceleration = p.createVector(0, 0)
     this.velocity = p.createVector(p.random(-1, 1), p.random(-2, 0))
     this.lifespan = 255
   }
@@ -73,6 +73,11 @@ class Particle {
   run() {
     this.update()
     this.display()
+  }
+  applyForce(force) {
+    const f = force.copy()
+    f.div(this.mass)
+    this.acceleration.add(f)
   }
 }
 
