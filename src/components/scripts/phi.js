@@ -8,9 +8,7 @@ export default p => {
   const phi = 1.6180339
   p.state = []
   p.dispatch = () => {}
-  let r = p.random(0, 255)
-  let g = p.random(0, 255)
-  let b = p.random(0, 255)
+  let color = [p.random(140, 200), p.random(140, 200), p.random(140, 200)]
 
   p.windowResized = () => {
     p.resizeCanvas(p.windowWidth, p.windowHeight)
@@ -23,20 +21,13 @@ export default p => {
   }
 
   p.draw = () => {
-    r++
-    if (r > 255) {
-      g++
-    }
-    if (g > 255) {
-      b++
-    }
-    if (b > 255) {
-      r = p.random(0, 255)
-      g = p.random(0, 255)
-      b = p.random(0, 255)
-    }
     p.background("#e9e2d7")
-    p.stroke(r, g, b)
+
+    color[p.random([0, 1, 2])]++
+    if (color[0] > 240 && color[1] > 240 && color[2] > 240) {
+      color = [p.random(140, 200), p.random(140, 200), p.random(140, 200)]
+    }
+    p.stroke(color[0], color[1], color[2])
     p.spiral(p.width / 2, p.height / 2, 0, 300)
   }
 
