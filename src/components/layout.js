@@ -44,29 +44,28 @@ export const PureLayout = ({ data, children }) => (
       </Link>
 
       <Link
-        to={`/about/`}
-        css={css`
-          float: right;
-        `}
-      >
-        About
-      </Link>
-
-      <Link
-        to={`/experiments/`}
-        css={css`
-          float: right;
-        `}
-      >
-        Experiments
-      </Link>
-      <Link
         to={`/blog/`}
         css={css`
           float: right;
         `}
       >
         Blog
+      </Link>
+      <Link
+        to={`/experiments/`}
+        css={css`
+          float: right;
+        `}
+      >
+        Projects
+      </Link>
+      <Link
+        to={`/about/`}
+        css={css`
+          float: right;
+        `}
+      >
+        About
       </Link>
     </div>
 
