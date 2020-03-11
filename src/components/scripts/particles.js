@@ -12,10 +12,13 @@ export default p => {
   p.draw = () => {
     p.background("#e9e2d7")
     p.stroke("pink")
+    const gravity = p.createVector(0,0.1)
 
     for (let ps of systems) {
-      ps.run()
+      ps.applyForce(gravity)
       ps.addParticle()
+      ps.run()
+      
     }
   }
 
@@ -36,6 +39,12 @@ class ParticleSystem {
       this.particles.push(new Confetti(this.p, this.origin))
     } else {
       this.particles.push(new Particle(this.p, this.origin))
+    }
+  }
+
+  applyForce(f){
+    for( let particle of this.particles){
+      particle.applyForce(f)
     }
   }
   run() {
