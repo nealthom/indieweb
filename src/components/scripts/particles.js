@@ -12,13 +12,12 @@ export default p => {
   p.draw = () => {
     p.background("#e9e2d7")
     p.stroke("pink")
-    const gravity = p.createVector(0,0.1)
+    const gravity = p.createVector(0, 0.1)
 
     for (let ps of systems) {
       ps.applyForce(gravity)
       ps.addParticle()
       ps.run()
-      
     }
   }
 
@@ -42,8 +41,8 @@ class ParticleSystem {
     }
   }
 
-  applyForce(f){
-    for( let particle of this.particles){
+  applyForce(f) {
+    for (let particle of this.particles) {
       particle.applyForce(f)
     }
   }
