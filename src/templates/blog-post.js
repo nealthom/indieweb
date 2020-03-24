@@ -18,6 +18,13 @@ export default ({ data }) => {
           Published <time className="dt-published">{date}</time>
         </a>
       </div>
+      <div
+        class="fb-comments"
+        data-href={`https://indieweb.netlify.com/${slug}/`}
+        data-width=""
+        data-numposts="5"
+        colorscheme="dark"
+      ></div>
     </Layout>
   )
 }

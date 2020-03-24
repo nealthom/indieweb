@@ -1,7 +1,7 @@
 ---
 title: An episode of trip to peru
 date: "2020-01-26"
-slug: trip-to-peru
+slug: peru-trip
 spoiler: I was there.
 ---
 

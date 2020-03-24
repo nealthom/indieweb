@@ -16,6 +16,8 @@
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "10.0.27",
+    "@mdx-js/mdx": "^1.5.7",
+    "@mdx-js/react": "^1.5.7",
     "@testing-library/jest-dom": "5.1.1",
     "@testing-library/react": "9.4.0",
     "babel-jest": "25.1.0",
@@ -23,6 +25,7 @@
     "gatsby": "^2.19.5",
     "gatsby-plugin-emotion": "^4.1.21",
     "gatsby-plugin-manifest": "^2.2.38",
+    "gatsby-plugin-mdx": "^1.0.84",
     "gatsby-plugin-offline": "^3.0.32",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sharp": "2.4.0",
