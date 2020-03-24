@@ -19,11 +19,10 @@ export default ({ data }) => {
         </a>
       </div>
       <div
-        class="fb-comments"
+        className="fb-comments"
         data-href={`https://indieweb.netlify.com/${slug}/`}
         data-width=""
         data-numposts="5"
-        colorscheme="dark"
       ></div>
     </Layout>
   )
